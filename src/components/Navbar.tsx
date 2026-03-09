@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Pdf from '../assets/resume.pdf';
+
+const resumeUrl = "https://docs.google.com/document/d/1-urkAVo7bOxy1ss_kB8qm9Ggt0L_59NbvFN7kVb_Smk/edit?usp=sharing";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +49,7 @@ export default function Navbar() {
               ))}
             </ol>
             <a
-              href="/resume.pdf"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 border border-green text-green rounded font-mono text-sm hover:bg-green-tint transition-colors"
@@ -84,7 +85,7 @@ export default function Navbar() {
           ))}
         </ol>
         <a
-          href={Pdf}
+          href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 border border-green text-green rounded font-mono text-lg hover:bg-green-tint transition-colors"
